@@ -9,6 +9,7 @@
   "author": "genkey6",
   "dependencies": {
     "@nestjs/graphql": "^10.0.10",
+    "@prisma/client": "^3.13.0",
     "graphql": "^16.4.0"
   },
   "devDependencies": {
