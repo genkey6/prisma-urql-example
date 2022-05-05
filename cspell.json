@@ -1,0 +1,9 @@
+{
+  "language": "en",
+  "ignorePaths": ["**/*.d.ts", "node_modules", "dist"],
+  "dictionaries": [],
+  "words": [
+    "datasource"
+  ],
+  "ignoreWords": []
+}
