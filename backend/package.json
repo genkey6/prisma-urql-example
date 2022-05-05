@@ -4,7 +4,8 @@
   "private": true,
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint './{src,test}/**/*.ts'"
   },
   "author": "genkey6",
   "dependencies": {
@@ -14,6 +15,9 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.14.0",
     "prisma": "^3.13.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
