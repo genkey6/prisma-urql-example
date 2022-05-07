@@ -1,0 +1,3 @@
+extends:
+  - "../.eslintrc.yml"
+  - "next/core-web-vitals"
