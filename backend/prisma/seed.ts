@@ -1,94 +1,94 @@
-import { PrismaClient, Prisma } from '@prisma/client';
+import { Prisma, PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 const ClassisData: Prisma.ClassisCreateInput[] = [
   {
-    name: '哺乳綱',
+    name: "哺乳綱",
     orders: {
       create: [
         {
-          name: 'クジラ目',
+          name: "クジラ目",
           families: {
             create: [
               {
-                name: 'マイルカ科',
+                name: "マイルカ科",
                 animals: {
                   create: [
                     {
-                      name: 'カマイルカ'
-                    }
-                  ]
-                }
+                      name: "カマイルカ",
+                    },
+                  ],
+                },
               },
               {
-                name: 'イッカク科',
+                name: "イッカク科",
                 animals: {
                   create: [
                     {
-                      name: 'シロイルカ'
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
+                      name: "シロイルカ",
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
   },
   {
-    name: '鳥綱',
+    name: "鳥綱",
     orders: {
       create: [
         {
-          name: 'ペンギン目',
+          name: "ペンギン目",
           families: {
             create: [
               {
-                name: 'ペンギン科',
+                name: "ペンギン科",
                 animals: {
                   create: [
                     {
-                      name: 'コウテイペンギン'
-                    }
-                  ]
-                }
-              }
-            ]
-          }
+                      name: "コウテイペンギン",
+                    },
+                  ],
+                },
+              },
+            ],
+          },
         },
         {
-          name: 'スズメ目',
+          name: "スズメ目",
           families: {
             create: [
               {
-                name: 'カエデチョウ科',
+                name: "カエデチョウ科",
                 animals: {
                   create: [
                     {
-                      name: 'ブンチョウ'
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  }
-]
+                      name: "ブンチョウ",
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
 
 async function main() {
-  console.log('Start seeding ...');
+  console.log("Start seeding ...");
   for (const data of ClassisData) {
     const classis = await prisma.classis.create({
-      data: data
+      data: data,
     });
     console.log(`Created classis with id: ${classis.id}`);
   }
-  console.log('Seeding finished.')
+  console.log("Seeding finished.");
 }
 
 main()

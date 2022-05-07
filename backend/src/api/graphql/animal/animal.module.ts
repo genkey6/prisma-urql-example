@@ -4,8 +4,6 @@ import { AnimalResolver } from "./animal.resolver";
 
 @Module({
   imports: [ApplicationModule],
-  providers: [
-    AnimalResolver,
-  ],
+  providers: [AnimalResolver],
 })
 export class AnimalModule {}

@@ -6,14 +6,14 @@ import { AnimalDto } from "./animal.dto";
 @Injectable()
 export class AnimalService {
   constructor(
-    @Inject(ANIMAL_REPOSITORY) private readonly repository: AnimalRepository,
+    @Inject(ANIMAL_REPOSITORY) private readonly repository: AnimalRepository
   ) {}
 
   async getAll(): Promise<AnimalDto[]> {
     const animals = await this.repository.findMany();
     return animals.map((animal) => {
       return AnimalDto.from(animal);
-    })
+    });
   }
 
   async getById(id: string): Promise<AnimalDto> {
