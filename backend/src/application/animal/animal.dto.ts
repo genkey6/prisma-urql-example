@@ -1,5 +1,6 @@
 import { Field, ID, ObjectType } from "@nestjs/graphql";
 import { FamilyDto } from "src/application/family/family.dto";
+import { Animal } from "src/domain/animal/animal";
 
 @ObjectType()
 export class AnimalDto {
@@ -14,5 +15,9 @@ export class AnimalDto {
 
   constructor(init: Required<AnimalDto>) {
     Object.assign(this, init);
+  }
+
+  static from(animal: Animal): AnimalDto {
+    return new AnimalDto(animal);
   }
 }
