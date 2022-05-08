@@ -3,7 +3,8 @@
   "ignorePaths": ["**/*.d.ts", "node_modules", "dist"],
   "dictionaries": [],
   "words": [
-    "datasource"
+    "datasource",
+    "urql"
   ],
   "ignoreWords": []
 }
